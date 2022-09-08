@@ -1,0 +1,15 @@
+server {
+    ###sitename.com should be changed to you domain name
+    server_name sitename.com, www.sitename.com;
+
+    if ($host = www.sitename.com) {
+        return 301 https://sitename.com$request_uri;
+    }
+
+    client_max_body_size 1024m;
+
+    location / {
+        proxy_pass http://127.0.0.1:9000;
+        include proxy_params;
+    }
+}
