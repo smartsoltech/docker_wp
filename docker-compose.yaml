@@ -34,7 +34,7 @@ services:
       - app-network
   Web-Server:
     depends_on:
-      - ycms_WPress
+      - WPress
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
