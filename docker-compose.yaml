@@ -3,7 +3,7 @@ version: '3'
 services:
   DB:
     image: mysql:8.0
-    container_name: ycms_DB
+    container_name: DB
     restart: unless-stopped
     env_file: .env
     environment:
